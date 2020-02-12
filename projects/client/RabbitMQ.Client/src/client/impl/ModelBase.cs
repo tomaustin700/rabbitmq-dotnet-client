@@ -591,17 +591,17 @@ namespace RabbitMQ.Client.Impl
             {
                 foreach (EventHandler<CallbackExceptionEventArgs> h in handler.GetInvocationList())
                 {
-                    try
-                    {
+                    //try
+                    //{
                         h(this, args);
-                    }
-                    catch
-                    {
-                        // Exception in
-                        // Callback-exception-handler. That was the
-                        // app's last chance. Swallow the exception.
-                        // FIXME: proper logging
-                    }
+                    //}
+                    //catch
+                    //{
+                    //    // Exception in
+                    //    // Callback-exception-handler. That was the
+                    //    // app's last chance. Swallow the exception.
+                    //    // FIXME: proper logging
+                    //}
                 }
             }
         }
