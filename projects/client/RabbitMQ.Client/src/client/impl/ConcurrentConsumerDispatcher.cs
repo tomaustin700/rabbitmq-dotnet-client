@@ -81,6 +81,7 @@ namespace RabbitMQ.Client.Impl
                 }
                 catch (Exception e)
                 {
+                    Console.Write(e.Message);
                     //var details = new Dictionary<string, object>()
                     //{
                     //    {"consumer", consumer},
