@@ -14,14 +14,14 @@ namespace RabbitMQ.Client.Impl
 
         public async Task Execute(ModelBase model)
         {
-            try
-            {
+            //try
+            //{
                 await Execute(model, asyncConsumer).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                // intentionally caught
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    // intentionally caught
+            //}
         }
 
         protected abstract Task Execute(ModelBase model, IAsyncBasicConsumer consumer);

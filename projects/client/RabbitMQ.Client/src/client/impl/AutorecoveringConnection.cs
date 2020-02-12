@@ -686,10 +686,10 @@ namespace RabbitMQ.Client.Framing.Impl
                 {
                     Abort();
                 }
-                catch (Exception)
-                {
-                    // TODO: log
-                }
+                //catch (Exception)
+                //{
+                //    // TODO: log
+                //}
                 finally
                 {
                     m_models.Clear();

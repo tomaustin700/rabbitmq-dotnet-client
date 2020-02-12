@@ -183,10 +183,10 @@ namespace RabbitMQ.Client.Impl
                     {
                         m_socket.Close();
                     }
-                    catch (Exception)
-                    {
-                        // ignore, we are closing anyway
-                    }
+                    //catch (Exception)
+                    //{
+                    //    // ignore, we are closing anyway
+                    //}
                     finally
                     {
                         _closed = true;
