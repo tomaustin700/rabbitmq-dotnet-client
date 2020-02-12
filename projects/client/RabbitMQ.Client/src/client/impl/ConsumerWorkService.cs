@@ -76,13 +76,13 @@ namespace RabbitMQ.Client
 
                     if (!tokenSource.IsCancellationRequested && actions.TryDequeue(out Action action))
                     {
-                        try
-                        {
+                        //try
+                        //{
                             action();
-                        }
-                        catch (Exception)
-                        {
-                        }
+                        //}
+                        //catch (Exception)
+                        //{
+                        //}
                     }
 
                 }
