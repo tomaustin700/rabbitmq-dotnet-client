@@ -69,8 +69,8 @@ namespace RabbitMQ.Client.Impl
         {
             UnlessShuttingDown(() =>
             {
-                //try
-                //{
+                try
+                {
                     consumer.HandleBasicDeliver(consumerTag,
                                                 deliveryTag,
                                                 redelivered,
@@ -78,16 +78,16 @@ namespace RabbitMQ.Client.Impl
                                                 routingKey,
                                                 basicProperties,
                                                 body);
-                //}
-                //catch (Exception e)
-                //{
-                //    var details = new Dictionary<string, object>()
-                //    {
-                //        {"consumer", consumer},
-                //        {"context",  "HandleBasicDeliver"}
-                //    };
-                //    model.OnCallbackException(CallbackExceptionEventArgs.Build(e, details));
-                //}
+                }
+                catch (Exception e)
+                {
+                    //var details = new Dictionary<string, object>()
+                    //{
+                    //    {"consumer", consumer},
+                    //    {"context",  "HandleBasicDeliver"}
+                    //};
+                    //model.OnCallbackException(CallbackExceptionEventArgs.Build(e, details));
+                }
             });
         }
 
