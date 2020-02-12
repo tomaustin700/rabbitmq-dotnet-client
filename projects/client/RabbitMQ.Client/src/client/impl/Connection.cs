@@ -1039,11 +1039,11 @@ entry.ToString());
                 // timer is already disposed,
                 // e.g. due to shutdown
             }
-            catch (Exception)
-            {
-                // ignore, let the read callback detect
-                // peer unavailability. See rabbitmq/rabbitmq-dotnet-client#638 for details.
-            }
+            //catch (Exception)
+            //{
+            //    // ignore, let the read callback detect
+            //    // peer unavailability. See rabbitmq/rabbitmq-dotnet-client#638 for details.
+            //}
 
             if (m_closed == false)
             {
